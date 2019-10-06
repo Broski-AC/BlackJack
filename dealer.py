@@ -12,11 +12,10 @@ class Dealer(CardDeck):
     # Give two cards to the dealer
     def startingHand(self):
         self.hand += CardDeck.deck.deal(2)
-        print(self.hand)
 
-y = Dealer()
-x = Dealer()
-y.startingHand()
-x.startingHand()
-
-print(y)
+    # Have dealer give card to player
+    def giveCard(self):
+        return CardDeck.deck.deal(1)
+    
+    # Check if above 17, otherwise keep going
+    def checkStatus(self):
